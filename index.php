@@ -143,10 +143,8 @@ function Login(){
 			
 			// Pri prihlaseni do admin je treba porovnast zadane udaje a korektnost hesla
 			$login = strtoupper($_POST['login']);
-			$jmeno = "PITTBULL";
 			$pass = MD5(MD5($_POST['pass']).$login);
-			$heslo = "e3c468cfdcd5ffced1756b3d2b05af28";
-				if ($login == $jmeno && $pass == $heslo) {
+				if ($login == _EDEN_ADMIN_NAME && $pass == _EDEN_ADMIN_PASS) {
 					$psw = 1;
 				}else {
 					$psw = 0;
