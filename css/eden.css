@@ -1,0 +1,222 @@
+/*ř*/
+body{font-family:Verdana CE, Verdana, Geneva CE, Geneva, Arial CE, Arial, Helvetica CE, Helvetica, sans-serif;}
+h1{font-style:normal;font-weight:bold;font-size:20px;color:#000000;}
+h2{font-style:normal;font-weight:bold;font-size:18px;color:#000000;margin:10px 0px 0px 0px;}
+h3{font-style:normal;font-weight:bold;font-size:14px;color:#000000;}
+a {text-decoration:none;}
+a:hover {text-decoration:underline;}
+.SmlText {font-style:normal; font-size:7pt;}
+.komentar {font-style:normal;font-weight:normal;font-size:11px;color:#000000;background-color:#FFFFFF;}
+.komentar A {color:#0000CC;text-decoration:none;border-style:solid;}
+.komentar A:hover {color:#0000CC;text-decoration:underline;}
+.cat_level1_odd{ background-color:#ebecff; }
+.cat_level1_even{ background-color:#f7f8ff; }
+.cat_level2_odd{ background-color:#ffffd9; }
+.cat_level2_even{ background-color:#ffbbbb; }
+.cat_over{ background-color:#FFDEDF;}
+.suda {background-color:#F4F4F4;}
+.licha { background-color:#FDF5E6;}
+.new {font-style:normal;font-weight:bold;font-size:8pt;color:#FF0000;}
+.sys_nadpis1 {font-style:normal;font-weight:bold;font-size:11px;color:#FFFFFF;padding-left:5pt}
+.sys_nadpis1 A {color:#0000CC;text-decoration:none;}
+.sys_nadpis1 A:hover {color:#0000CC;text-decoration:underline;}
+.sys_nadpis2 {font-style:normal;font-weight:normal;font-size:11px;color:#FFFFFF;}
+.sys_nadpis2 A {color:#0000CC;text-decoration:none;}
+.sys_nadpis2 A:hover {color:#0000CC;text-decoration:underline;}
+.sys_paticka {border-top:#FFFFFF 1px solid;font-style:normal;font-weight:normal;font-size:10px;color:#FFFFFF;background-color:#999999;}
+.sys_paticka A {color:#FFFFFF;text-decoration:none;}
+.sys_paticka A:hover {color:#0000CC;text-decoration:underline;}
+.komentar_hlavicka {padding-left:3pt;padding-right:3pt;padding-top:3pt;padding-bottom:3pt;font-style:normal;font-weight:normal;font-size:11px;color:#000000;background-color:#9EC5E4;}
+.komentar_hlavicka A {color:#000000;text-decoration:none;}
+.komentar_hlavicka A:hover {color:#0000CC;text-decoration:underline;}
+.menu_nadpis {font-size:11px;  font-weight:bold; padding-left:5px;color:#000000;}
+.menu_text {font-style:normal; font-size:10px; padding-left:0px;}
+.nadpis {font-size:18px;font-style:normal;font-weight:bold;color:#000000;padding-bottom:10px;}
+.nadpis_sekce {font-size:14px;font-style:normal;font-weight:bold;color:#999999;}
+.nadpis_bily {font-size:18px;font-style:normal;font-weight:bold;color:#FFFFFF;}
+.nadpis-boxy {font-size:11px;font-style:normal;font-weight:bold;color:#000000;padding-left:5px;}
+/* FORMS */
+.eden_inputs {float:left;margin: 0px 0px 10px 0px;}
+label {font-weight:bold;}
+input, select, textarea {background:#ffffbf;}
+input_text{height:22px;}
+input_submit{font-weight:bold;background:#bfbf00;height:22px;}
+.eden_button{font-weight:bold;background:#bfbf00;height:22px;}
+.eden_button_no{font-weight:bold;background:#d51725;height:22px;}
+/* All MAIN TABLES */
+table.eden_main_table {margin:10px 0px 10px 0px;width:857px;}
+tr.eden_main_table {margin:10px 0px 10px 0px;}
+.eden_title_top {font-size:11px;font-style:normal;font-weight:bold;color:#000000;padding-left:5px;background: #b3c3dd;}
+.eden_title_middle {font-size:11px;font-style:normal;font-weight:bold;color:#000000;padding-left:5px;background: #ff8080}
+.eden_title {font-size:11px;font-style:normal;font-weight:bold;color:#000000;padding-left:5px;background: #DCE3F1;}
+.nadpis-boxy A {color:#0000CC;text-decoration:none;}
+.nadpis-boxy A:hover {color:#0000CC;text-decoration:underline;}
+.nadpis-boxy-b {font-size:11px;font-style:normal;font-weight:bold;color:#000000;}
+.nadpis-red {font-size:11px;font-style:normal;font-weight:bold;color:#FF0000;}
+.nadpis-red A {color:#FF0000;text-decoration:none;}
+.nadpis-red A:hover {color:#0000CC;text-decoration:underline;}
+.popisky {font-style:normal;font-weight:bold;font-size:11px;color:#000000;background-color:#B3C3DD;}
+.popisky2 {font-style:normal;font-weight:bold;font-size:11px;color:#000000;background-color:#CCCCCC;}
+.red {color:#FF0000;}
+.red A {color:#FF0000;text-decoration:none;}
+.red A:hover {color:#0000CC;text-decoration:underline;}
+.blue {color:#0000CC;}
+.blue A {color:#0000CC;text-decoration:none;}
+.blue A:hover {color:#0000CC;text-decoration:underline;}
+.green {color:#0FD710;}
+.dblue { color:#5F9EA0;}
+.msg{color:#ff0000;padding:20px;font-weight:bold;}
+.cups_text, .cups_text_forms, input, td {font-style:normal;font-size:8pt;}
+.cups_text A, .cups_text_forms A {color:#0000CC;text-decoration:none;}
+.cups_text A:hover, .cups_text_forms A:hover {color:#0000CC;text-decoration:underline;}
+.article_undertext, .article_undertext a {color:#999999;}
+.zahlavi {font-size:8pt;background-color:#FFDEDF;border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;}
+.zapati {font-size:8pt;}
+.zapati A {color:#0000CC;text-decoration:none;}
+.zapati A:hover {color:#0000CC;text-decoration:underline;}
+.editor_bg {background-color:#FFFFFF;}
+.editor_o { border-bottom:buttonshadow 1px solid;border-left:buttonhighlight 1px solid;border-right:buttonshadow 1px solid;border-top:buttonhighlight 1px solid;   cursor:hand;margin-left:0px;margin-right:0px}
+.editor_v {margin-left:1px;margin-right:1px;margin-top:2px;visibility:visible}
+.error{font-size:12px;font-style:normal;font-weight:bold;color:#FF0000;}
+.button {background-color:buttonface;font-weight:bold;font-family:Tahoma;font-size:11px;border:1px outset;}
+.btn { width:22px; height:22px; border:1px solid buttonface; margin:0; padding:0; }
+.btnOver { width:22px; height:22px; border:1px outset;}
+.btnDown {width:22px; height:22px; border:1px inset; background-color:buttonhighlight; }
+.btnNA {width:22px; height:22px; border:1px solid buttonface; filter:alpha(opacity=25);}
+.cMenu {background-color:threedface; color:menutext; cursor:Default; font-family:MS Sans Serif; font-size:8pt; padding:2 12 2 16;}
+.cMenuOver {background-color:highlight; color:highlighttext; cursor:Default; font-family:MS Sans Serif; font-size:8pt; padding:2 12 2 16;}
+.cMenuDivOuter { background-color:threedface; height:9 }
+.cMenuDivInner { margin:0 4 0 4; border-width:1; border-style:solid; border-color:threedshadow threedhighlight threedhighlight threedshadow; }
+#eden_hintbox{ /*CSS for pop up hint box */
+position:absolute;
+top:0;
+background-color:lightyellow;
+width:150px; /*Default width of hint.*/ 
+padding:3px;
+border:1px solid black;
+font:normal 11px Verdana;
+line-height:18px;
+z-index:100;
+border-right:3px solid black;
+border-bottom:3px solid black;
+visibility:hidden;
+}
+
+.eden_hintanchor{ /*CSS for link that shows hint onmouseover*/
+font-weight:bold;
+color:navy;
+margin:3px 8px;
+}
+.phorum-names {font-style:normal; font-weight:bold; font-size:12px; color:#929292;}
+.phorum-names A {color:#929292; text-decoration:underline;}
+.phorum-names A:hover {color:#0000CC; text-decoration:underline;}
+.phorum-megatopic {font-style:normal; font-weight:bold; font-size:12px; color:#000000;}
+.phorum-megatopic A {color:#000000; text-decoration:none;}
+.phorum-megatopic A:hover {color:#0000CC;text-decoration:underline;}
+.phorum-topic {font-style:normal; font-weight:bold; font-size:12px; color:#000000;}
+.phorum-topic A {color:#000000; text-decoration:none;}
+.phorum-topic A:hover {color:#0000CC; text-decoration:underline;}
+
+UL.menu, UL.menu A, UL.menu A:hover {color:#0000CC;margin:0;padding:0;}
+LI.menu_level_0{list-style:none; /*square inside url(images/sys_ram_odkazu.gif);*/padding:4px 0px 0px 4px; font-weight:bold;}
+LI.menu_level_1{list-style:none;padding:2px 2px 1px 5px;}
+
+UL.menu_shop, UL.menu_shop A, UL.menu_shop A:hover {color:#FF0000;margin:0;padding:0;}
+LI.menu_shop_level_0{list-style:none; /*square inside url(images/sys_ram_odkazu.gif);*/ padding:4px 0px 0px 4px; font-weight:bold;}
+LI.menu_shop_level_1{list-style:none;padding:2px 2px 1px 5px;}
+/*************************************************************
+CUPS 
+**************************************************************/
+INPUT.cups_text_forms{
+color:#ffffff;
+border:1px;
+border-style:solid;
+border-color:#000000;
+height:18px;
+padding-left:2px; 
+}
+.cell_line{
+border-width:1px; 
+border-right-style:solid;
+}
+td#eden_cup_table_name {background-color:#210b80; color:#ffffff; font-weight:bold;}
+td#eden_cup_table {background-color:#e8e8e8;}
+td#eden_cup_table_odd {background-color:#f8f7f7;}
+#eden_cup_table_win {color:#336633; font-weight:bold;}
+#eden_cup_table_lose {color:#ff0000; font-weight:bold;}
+
+
+/**************************************************************
+CALENDAR
+**************************************************************/
+/**** month and year header at top of calendar ****/
+.date_header{ font-size:16px; font-weight:bold }
+
+/**** color and size of calendar cells.  ****/
+.day_cell{ background-color:#EDECD8; height:80; width:95; }
+.empty_day_cell{ background-color:#EEEEEE; height:80; width:95; }
+.today_cell{ background-color:#F5F4ED; height:80; width:95; }
+
+/**** day number in upper left corner of each cell ****/
+.day_number{ font-size:10px; color:#000000 }
+
+/**** text ****/
+.cal_text{ font-size:8pt; font-family:Verdana CE, Verdana, Geneva CE, Geneva, Arial CE, Arial, Helvetica CE, Helvetica, sans-serif; color:#000000; }
+
+/**** title_txt is the text for each post on main page ****/
+.title_txt{ font-size:10px; color:#000000 }
+.title_txt A:link{ color:#0000CC; text-decoration:underline }
+.title_txt A:active{ color:#0000CC; text-decoration:underline }
+.title_txt A:visited{ color:#0000CC; text-decoration:underline }
+.title_txt A:hover{ color:#0000CC; text-decoration:underline }
+
+/**** time line under title text when event time given ****/
+.time_str{ font-size:9px; }
+
+/**** column headers or days of the week ****/
+.hlavicka_sloupcu{ background-color:#999999; font-size:12px; color:#FFFFFF; font-weight:bold }
+
+/**** footprint text ****/
+.footprint{ font-size:10px; color:#000000; font-weight:bold; }
+.footprint A{ font-size:10px; color:#0000CC; font-weight:bold; }
+
+
+/*************************************************************
+TAB
+**************************************************************/
+.dropcontent{display:block;}
+.tabstyle{cursor:pointer;cursor:hand; padding:3px 3px 3px 3px; line-height:2em;}
+
+/**************************************************************
+AJAX NAPOVEDA
+**************************************************************/
+/* Big box with list of options */
+#eden_ajax_listOfOptions{
+  position:absolute;  /* Never change this one */
+  width:175px;  /* Width of box */
+  height:150px;  /* Height of box */
+  overflow:auto;  /* Scrolling features */
+  border:1px solid #000000;  /* Dark green border */
+  background-color:#FFFFFF;  /* White background color */
+  text-align:left;
+  font-size:1em;
+  z-index:100;
+}
+#eden_ajax_listOfOptions div{  /* General rule for both .optionDiv and .optionDivSelected */
+  margin:1px;
+  padding:1px;
+  cursor:pointer;
+  font-size:12px;
+}
+#eden_ajax_listOfOptions .eden_optionDiv{  /* Div for each item in list */
+  
+}
+#eden_ajax_listOfOptions .eden_optionDivSelected{ /* Selected item in the list */
+  background-color:#006fbf;
+  color:#FFFFFF;
+}
+#eden_ajax_listOfOptions_iframe{
+  background-color:#F00;
+  position:absolute;
+  z-index:5;
+}
