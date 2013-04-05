@@ -3659,24 +3659,6 @@ function AdminCustom($cid){
 }
 /***********************************************************************************************************
 *
-*		Awards
-*
-*		Zobrazeni oceneni
-*
-***********************************************************************************************************/
-function ClanAwards(){
-	
-	global $db_clan_awards,$db_country,$db_clan_games,$db_setup;
-	global $url_clan_awards,$url_flags,$url_games;
-	global $eden_cfg;
-	
-	$res_setup = mysql_query("SELECT setup_basic_date FROM $db_setup") or die ("<strong>File:</strong> ".__FILE__."<br /><strong>Line:</strong>".__LINE__."<br />".mysql_error());
-	$ar_setup = mysql_fetch_array($res_setup);
-	// Nacteni sablony
-	include "templates/tpl.clan_awards.php";
-}
-/***********************************************************************************************************
-*
 *		PokerHandsAdd
 *
 *		Pridani pokerove hry
