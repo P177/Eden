@@ -448,6 +448,12 @@ function Msg($msg){
 		case "decklist_add_er":
 			echo _ERR_DECKLIST_ADD_ER;
 			break;
+		case "decklist_edit_ok":
+			echo _ERR_DECKLIST_EDIT_OK;
+			break;
+		case "decklist_edit_er":
+			echo _ERR_DECKLIST_EDIT_ER;
+			break;
 		case "decklist_add_er_no_format":
 			echo _ERR_DECKLIST_ADD_ER_NO_FORMAT;
 			break;

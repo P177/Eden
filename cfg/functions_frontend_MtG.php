@@ -202,9 +202,11 @@ class MtGDecklists {
 	
 	/**
 	 * Show Add Decklist template
+	 * @param string	(add, edit)
+	 * @param array		Only when $mode = edit - (decklist_id, decklist_name, decklist_format, decklist_description)
 	 * @return string
 	 */
-	public function formAddDecklist(){
+	public function formAddDecklist($mode = "add", $data = array()){
 		
 		ob_start();
 	    include "templates/tpl.mtg_form_add_decklist.php";
@@ -219,18 +221,18 @@ class MtGDecklists {
 	 * @param integer	Decklist ID
 	 * @return string
 	 */
-	public function formAddDecklistCards($did = false){
+	public function formEditDecklist($did = false){
 		
 		if ($did == false){
 			$output = "";
 		} else {
-			$res = mysql_query("SELECT decklist_id, decklist_name, decklist_format 
+			$res = mysql_query("SELECT decklist_id, decklist_name, decklist_format, decklist_description 
 			FROM "._DB_MTG_DECKLISTS." 
 			WHERE decklist_id = ".(integer)$did) or die ("<strong>File:</strong> ".__FILE__."<br><strong>Line:</strong>".__LINE__."<br>".mysql_error());
 			$ar = mysql_fetch_array($res);
 			
 			ob_start();
-		    include "templates/tpl.mtg_form_add_decklist_cards.php";
+		    include "templates/tpl.mtg_form_edit_decklist.php";
 		    $output = ob_get_contents();
 		    ob_end_clean();
 	    }
@@ -266,12 +268,14 @@ class MtGDecklists {
 		if ($did == false){
 			$output = "";
 		} else {
+			/*
 			// If no Add mode, show only complete decklists
 			if ($mode == "standard"){
 				$where = " AND (decklist_complete = 1) ";
 			} else {
 				$where = "";
 			}
+			*/
 			$res = mysql_query("SELECT decklist_id, decklist_admin_id, decklist_name, decklist_format, decklist_description, admin_nick 
 			FROM "._DB_MTG_DECKLISTS." 
 			JOIN "._DB_ADMINS." ON admin_id = decklist_admin_id 
@@ -295,6 +299,11 @@ class MtGDecklists {
 	 */
 	public function showMyDecklists(){
 		
+		$res = mysql_query("SELECT decklist_id, decklist_name, decklist_format 
+		FROM "._DB_MTG_DECKLISTS." 
+		WHERE decklist_admin_id = ".(integer)$_SESSION['loginid']." 
+		ORDER BY decklist_format ASC, decklist_name ASC") or die ("<strong>File:</strong> ".__FILE__."<br><strong>Line:</strong>".__LINE__."<br>".mysql_error());
+		
 		ob_start();
 	    include "templates/tpl.mtg_show_my_decklists.php";
 	    $output = ob_get_contents();
@@ -304,26 +313,51 @@ class MtGDecklists {
 	}
 	
 	/**
+	 * Show His Decklists (well, even Hers ;)
+	 * @return string
+	 */
+	public function showHisDecklists($admin_id = false){
+		
+		if ($admin_id == false){
+			$output = "";
+		} else {
+			$res = mysql_query("
+			SELECT decklist_id, decklist_admin_id, decklist_name, decklist_format 
+			FROM "._DB_MTG_DECKLISTS." 
+			WHERE decklist_admin_id = ".(integer)$admin_id." 
+			ORDER BY decklist_format ASC, decklist_date_last_modified DESC") or die ("<strong>File:</strong> ".__FILE__."<br><strong>Line:</strong>".__LINE__."<br>".mysql_error());
+			
+			ob_start();
+		    include "templates/tpl.mtg_show_his_decklists.php";
+		    $output = ob_get_contents();
+		    ob_end_clean();
+	    }
+	    return $output;
+	}
+	
+	/**
 	 * Save Decklist
 	 * @param array		$_POST
 	 * @param string	link - &lang=cz&filter=
+	 * @param string	mode - decklist_add, decklist_edit
 	 */
-	public function saveDecklist($decklist, $link = ""){
+	public function saveDecklist($decklist, $link = "", $mode = "decklist_add"){
 		
 		$decklist_name = strip_tags($decklist['decklist_name'],"");
 		$decklist_desc = strip_tags($decklist['decklist_desc'],"");
 	 	$decklist_format = $decklist['decklist_format'];
 		
 		if ($decklist_name == ""){
-			$action = "decklists_add";
+			$action = "decklist_add";
 			$msg = "decklist_add_er_no_name";
 			$form_vars = "&dn=".$decklist_name."&df=".(integer)$decklist_format;
 	 	} elseif ($decklist_format == 0){
-			$action = "decklists_add";
+			$action = "decklist_add";
 			$msg = "decklist_add_er_no_format";
 			$form_vars = "&dn=".$decklist_name."&dd=".$decklist_desc."&df=".(integer)$decklist_format;
-		} else {
-			$res = mysql_query("INSERT INTO "._DB_MTG_DECKLISTS." (
+		} elseif ($mode == "decklist_add") {
+			$res = mysql_query("
+			INSERT INTO "._DB_MTG_DECKLISTS." (
 			decklist_admin_id, 
 			decklist_name, 
 			decklist_format, 
@@ -341,12 +375,29 @@ class MtGDecklists {
 			$ar_id = mysql_fetch_array($res_id);
 			$decklist_id = $ar_id[0];
 			if ($res){
-				$action = "decklists_add_cards";
+				$action = "decklist_add_cards";
 				$msg = "decklist_add_ok";
 				$form_vars = "&did=".$decklist_id;
 			} else {
-				$action = "decklists_add";
+				$action = "decklist_add";
 				$msg = "decklist_add_er";
+				$form_vars = "";
+			}
+		} elseif ($mode == "decklist_edit"){
+			$res = mysql_query("
+			UPDATE "._DB_MTG_DECKLISTS." 
+			SET decklist_name = '".mysql_real_escape_string($decklist_name)."', 
+			decklist_format = ".(integer)$decklist_format.", 
+			decklist_description = '".mysql_real_escape_string($decklist_desc)."'
+			WHERE decklist_id = ".(integer)$decklist['decklist_id']
+			) or die ("<strong>File:</strong> ".__FILE__."<br><strong>Line:</strong>".__LINE__."<br>".mysql_error());
+			if ($res){
+				$action = "decklist_show";
+				$msg = "decklist_edit_ok";
+				$form_vars = "&did=".$decklist['decklist_id'];
+			} else {
+				$action = "decklist_edit";
+				$msg = "decklist_edit_er";
 				$form_vars = "";
 			}
 		}
