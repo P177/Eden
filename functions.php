@@ -20,6 +20,7 @@ include($file_prefix."/cfg/functions_Common.php");				/*	Common functions for Fr
 *		FormatDatetime					-	ZFORMATOVANI CASU Z DATETIME
 *		FormatTimestamp					-	NASTAVENI DATUMU Z FORMATU
 *		FormatPaypalTimestamp			-	NASTAVENI DATUMU Z PAYPAL NVP API
+*		FormatTournamentFormat					-	ZFORMATOVANI FORMATU TURNAJE
 *		FormatTime						-	ZFORMATOVANI CASU
 *		FormatTimeS						-	ZFORMATOVANI CASU Z FUNKCE time() NA POUZITI V EDITORU
 *		FormatTimeP						-	ZFORMATOVANI CASU Z FUNKCE time() NA POUZITI V EDITORU
@@ -215,6 +216,58 @@ function LogOut(){
 	session_destroy();
 	header ("Location: index.php?action=msg");
 	echo _FUNCTIONLOGOUT;
+}
+/***********************************************************************************************************
+*
+*		ZFORMATOVANI FORMATU TURNAJE
+*
+***********************************************************************************************************/
+function FormatTournamentFormat($format) {
+    $formattedFormat = "Nedefinovaný";
+    switch($format) {
+        case "doubledraft":
+            $formattedFormat = "Double Draft";
+            break;
+        case "draft":
+            $formattedFormat = "Draft";
+            break;
+        case "extended":
+            $formattedFormat = "Extended";
+            break;
+        case "highlander":
+            $formattedFormat = "Highlander";
+            break;
+        case "legacy":
+            $formattedFormat = "Legacy";
+            break;
+        case "modern":
+            $formattedFormat = "Modern";
+            break;
+        case "standard":
+            $formattedFormat = "Standard";
+            break;
+        case "vintage":
+            $formattedFormat = "Vintage";
+            break;
+    }
+    return $formattedFormat;
+}
+/***********************************************************************************************************
+*
+*		ZFORMATOVANI PRAVIDELNOSTI TURNAJE
+*
+***********************************************************************************************************/
+function FormatTournamentRegularity($regularity) {
+    $formattedRegularity = "Nedefinovaná";
+    switch($regularity) {
+        case "onetime":
+            break;
+        case "weekly":
+            break;
+        default:
+            break;
+    }
+    return $formattedRegularity;
 }
 /***********************************************************************************************************
 *

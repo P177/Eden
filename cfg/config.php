@@ -206,6 +206,7 @@ $db_streams_date = $eden_cfg['db_prefix']."_streams_date";
 $db_thumbs = $eden_cfg['db_prefix']."_thumbs";
 $db_todo = $eden_cfg['db_prefix']."_todo";
 $db_todo_category = $eden_cfg['db_prefix']."_todo_category";
+$db_tournaments = $eden_cfg['db_prefix']."_tournaments";
 $db_videos = $eden_cfg['db_prefix']."_videos";
 
 define("_URL_ADS",$eden_cfg['url_edencms_files']."img_adds/");

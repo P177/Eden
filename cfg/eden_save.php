@@ -2913,12 +2913,12 @@ require("./class.mail.php");
 	 	$res = mysql_query("UPDATE $db_admin SET admin_agree_email=0 WHERE shop_seller_admin_id=".(integer)$_SESSION['loginid']) or die ("<strong>File:</strong> ".__FILE__."<br><strong>Line:</strong>".__LINE__."<br>".mysql_error());
 	 /***********************************************************************************************************
 	*
-	*		DECKLISTS - ADD or EDIT
+	*		DECKLISTS - ADD
 	*
 	***********************************************************************************************************/
-	 } elseif (($_POST['mode'] == "decklist_add" || $_POST['mode'] == "decklist_edit") && ($_SESSION['u_status'] == "user" || $_SESSION['u_status'] == "seller" || $_SESSION['u_status'] == "admin")) {
+	 } elseif ($_POST['mode'] == "decklists_add" && ($_SESSION['u_status'] == "user" || $_SESSION['u_status'] == "seller" || $_SESSION['u_status'] == "admin")) {
 	 	$decklist = new MtGDecklists($eden_cfg);
-	 	$decklist->saveDecklist($_POST, "&lang=".$_GET['lang']."&filter=".$_GET['filter'], $_POST['mode']);
+	 	$decklist->saveDecklist($_POST, $link = "&lang=".$_GET['lang']."&filter=".$_GET['filter']);
 	/***********************************************************************************************************
 	*
 	*		ZBYTEK

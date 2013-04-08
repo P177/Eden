@@ -197,6 +197,39 @@ if (!empty($_SESSION['project'])) {
 
 		<?php
 		
+		/* Turnaje */
+		} elseif ($tinymce_init_mode == "tournament"){?>
+			// Preview 
+			tinyMCE.init({
+				// General options
+				<?php echo $tiny_settings_geleral; ?>
+				editor_selector : "tournament_description",
+
+				// Plugins
+				<?php echo $tiny_settings_plugins; ?>
+				
+				// Plugins options
+				<?php echo $tiny_settings_plugin_options; ?>
+				
+				// EdenImageManager
+				file_browser_callback : "openEdenImageManager",
+				
+				// Extended valid elements
+				<?php echo $tiny_settings_extended_valid_elements; ?>
+				 
+				// Theme options
+				theme_advanced_buttons1 : "code,|,bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,styleselect,formatselect,fontselect,fontsizeselect,sub,sup,|,nonbreaking",
+				theme_advanced_buttons2 : "cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor,flags,cards,cleanup,help,|,insertdate,inserttime,|,forecolor,backcolor",
+				theme_advanced_buttons3 : "tablecontrols,|,hr,removeformat,visualaid,|,charmap,emotions,advhr|,cite,abbr,acronym,del,ins,attribs",
+				<?php echo $tiny_settings_theme_options; ?>
+				
+				// Example content CSS (should be your site CSS)
+				<?php if ($_SESSION['project'] == "bludr"){ echo "content_css : \"http://www.modrak.cz/css/bludr_tinymce.css\",";} ?>
+		 
+				// Style formats
+				<?php echo $tiny_settings_style_formats; ?>
+			});<?php
+		
 		
 		/* Aktuality */
 		} elseif ($tinymce_init_mode == "act"){?>
@@ -421,7 +454,8 @@ if (!empty($_SESSION['project'])) {
 						echo "<a href=\"sys_statistics.php?project=".$_SESSION['project']."\"><li class=\"menu_level_0\">"._STAT_STATISTICS."</a></li>";
 						if ($eden_cfg['modul_todo']== true && CheckPriv("groups_todo_add") == 1) { echo "<li class=\"menu_level_0\"><a href=\"modul_todo.php?project=".$_SESSION['project']."\">"._TODO."</a></li>"; }
 						if ($eden_cfg['modul_streams']== true && CheckPriv("groups_stream_add") == 1) { echo "<li class=\"menu_level_0\"><a href=\"modul_streams.php?project=".$_SESSION['project']."\">"._STREAMS."</a></li>"; }
-						if ($eden_cfg['modul_video']== true && CheckPriv("groups_video_add") == 1) { echo "<li class=\"menu_level_0\"><a href=\"modul_videos.php?project=".$_SESSION['project']."\">"._VIDEOS."</a></li>"; }
+                                                if ($eden_cfg['modul_tournaments']== true && CheckPriv("groups_tournament_add") == 1) { echo "<li class=\"menu_level_0\"><a href=\"modul_tournaments.php?project=".$_SESSION['project']."\">"._TOURNAMENT."</a></li>"; }        
+                                                if ($eden_cfg['modul_video']== true && CheckPriv("groups_video_add") == 1) { echo "<li class=\"menu_level_0\"><a href=\"modul_videos.php?project=".$_SESSION['project']."\">"._VIDEOS."</a></li>"; }
 	echo "			</ul>\n";
 	echo "					</td>\n";
 	echo "				</tr>\n";
