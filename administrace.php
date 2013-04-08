@@ -267,6 +267,7 @@ function CfgList(){
 			$entry != "functions_frontend_Search.php" &&
 			$entry != "functions_frontend_Streams.php" &&
 			$entry != "functions_frontend_Streams_Cron.php" &&
+			$entry != "functions_frontend_Tournament.php" &&
 			$entry != "functions_frontend_UserEdit.php" &&
 			$entry != "main_shop.php" &&
 			$entry != "eden_lang_cz.php" &&
@@ -276,6 +277,7 @@ function CfgList(){
 			$entry != "eden_iframe.php" &&
 			$entry != "eden_jump.php" &&
 			$entry != "eden_save.php" &&
+			$entry != "eden_sec.php" &&
 			$entry != "eden_show_images.php" &&
 			$entry != "eden_ban.php" &&
 			$entry != "class.mail.php" &&
@@ -410,6 +412,7 @@ function Cfg(){
 					array ("./cfg/functions_frontend_Search.php", $eden_cfg['ftp_path']."functions_frontend_Search.php"),
 					array ("./cfg/functions_frontend_Streams.php", $eden_cfg['ftp_path']."functions_frontend_Streams.php"),
 					array ("./cfg/functions_frontend_Streams_Cron.php", $eden_cfg['ftp_path']."functions_frontend_Streams_Cron.php"),
+					array ("./cfg/functions_frontend_Tournament.php", $eden_cfg['ftp_path']."functions_frontend_Tournament.php"),
 					array ("./cfg/functions_frontend_UserEdit.php", $eden_cfg['ftp_path']."functions_frontend_UserEdit.php"),
 					array ("./cfg/main_shop.php", $eden_cfg['ftp_path']."main_shop.php"),
 					array ("./cfg/sessions.php", $eden_cfg['ftp_path']."sessions.php")
