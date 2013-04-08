@@ -1173,7 +1173,7 @@ function ForumPM(){
 					$pm_editor->textarea_rows = "10";
 					$pm_editor->textarea_cols = "80";
 					
-					echo $pm_editor->BBEditor();
+					$pm_editor->BBEditor();
 	echo "		</td>\n";
 	echo "	</tr>\n";
 	echo "	<tr>\n";

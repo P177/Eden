@@ -335,6 +335,12 @@ if (!empty($_SESSION['project'])) {
 			require "./sys_save/sys_save_todo.php";
 		}
 /***********************************************************************************************************
+*		modul_tournament.php - ANKETY - ADD, EDIT OR DELETE
+***********************************************************************************************************/
+		if ($_GET['action'] == "tournament_add" || $_GET['action'] == "tournament_edit" || $_GET['action'] == "tournament_del"){
+                        require "./sys_save/sys_save_tournament.php";
+		}
+/***********************************************************************************************************
 *		modul_videos.php - VIDEOS - ADD, EDIT OR DELETE 
 ***********************************************************************************************************/
 		if ($_GET['action'] == "video_add" || $_GET['action'] == "video_edit" || $_GET['action'] == "video_del"){

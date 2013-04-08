@@ -275,26 +275,3 @@ function ClanShowGameIcon ($mode = "clan", $form = "all", $size = "small", $limi
 	}
 	return $outcome;
 }
-/***********************************************************************************************************
-*
-*		Awards
-*
-*		Zobrazeni oceneni
-*
-***********************************************************************************************************/
-function ClanAwards(){
-	
-	global $db_clan_awards,$db_country,$db_clan_games,$db_setup;
-	global $url_clan_awards,$url_flags,$url_games;
-	global $eden_cfg;
-	
-	$res_setup = mysql_query("SELECT setup_basic_date FROM $db_setup") or die ("<strong>File:</strong> ".__FILE__."<br /><strong>Line:</strong>".__LINE__."<br />".mysql_error());
-	$ar_setup = mysql_fetch_array($res_setup);
-	// Nacteni sablony
-	ob_start();
-	include "templates/tpl.clan_awards.php";
-	$output = ob_get_contents();
-	ob_end_clean();
-	
-	return $output;
-}

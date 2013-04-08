@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 define("_EDEN_LANG_LOADED",1);
 //**************************************************************************************************************
 //
@@ -2522,6 +2522,28 @@ define("_TODO_NAME","Název");
 define("_TODO_PRIORITY","Priorita");
 define("_TODO_PRIORITY_HELP","Nejvyšší priorita = 1, Nejnižší = 99");
 define("_TODO_SHOW_TASKS","Zobrazerní úkolů");
+//**************************************************************************************************************
+//
+//		TOURNAMENTS
+//
+//**************************************************************************************************************
+define("_TOURNAMENT","Turnaje");
+define("_TOURNAMENT_LIST","Seznam turnajů");
+define("_TOURNAMENT","Turnaj");
+define("_TOURNAMENT_ADD","Přidat turnaj");
+define("_TOURNAMENT_DEL","Odstranit turnaj");
+define("_TOURNAMENT_EDIT","Editovat turnaj");
+define("_TOURNAMENT_NAME","Název turnaje");
+define("_TOURNAMENT_FORMAT","Formát turnaje");
+define("_TOURNAMENT_DATE","Datum turnaje");
+define("_TOURNAMENT_REGULARITY","Pravidelnost turnaje");
+define("_TOURNAMENT_TIME","Čas začátku turnaje");
+define("_TOURNAMENT_REGISTRATION","Čas začátku registrace");
+define("_TOURNAMENT_BUYIN","Cena za vstup");
+define("_TOURNAMENT_PRIZES","Ceny");
+define("_TOURNAMENT_AUTHOR","Autor");
+define("_TOURNAMENT_CHECK_DELETE","Opravdu chcete tento turnaj vymazat?");
+define("_TOURNAMENT_DESCRIPTION","Popis turnaje");
 //**************************************************************************************************************
 //
 //		VIDEO
