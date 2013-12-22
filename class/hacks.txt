@@ -1,0 +1,6 @@
+HTMLPurifier
+d:\uceni\eden\class\HTMLPurifier\HTMLPurifier\AttrDef\HTML\LinkTypes.php
+Line 40
+if (is_numeric($allowed[$part])){ // Mensi hack - pro to aby propustil integer jako parametr attributu rel
+	if (!isset($allowed[$part])) continue;
+}
